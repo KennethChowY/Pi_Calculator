@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Pi {
+    public static void main( String args[] ) {
+        Scanner scan = new Scanner( System.in );
+        double x = scan.nextDouble();
+        System.out.printf("%.4f",Find_Pi(x));
+    
+    scan.close();
+//Calculates Pi
+    }
+    public static double Find_Pi(double n) {
+        double point_circle = 0;
+        double point_square = 0;
+        for(double i = n; i >= 0; i--) { //Finding points withing a circle and a square
+            double x = Math.random();
+            double y = Math.random();
+            if (x*x + y*y <= 1) {
+                point_circle += 1;
+                }
+                point_square += 1;
+                System.out.println(4 * point_circle/point_square);
+            }
+        System.out.println(4 * point_circle/point_square);
+        return 4 * point_circle/point_square;
+        }
+    }
+
+    
+
+
